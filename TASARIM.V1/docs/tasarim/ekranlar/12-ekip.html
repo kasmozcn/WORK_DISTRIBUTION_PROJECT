@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GörevAkış · Ekip</title>
+<link rel="stylesheet" href="../gorevakis.css">
+<style>
+  .kisi { height: 62px; gap: 12px; }
+  .kisi .t { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+  .kisi b { font-size: 15px; font-weight: 600; }
+  .kisi small { font-size: 13px; color: var(--soluk); }
+  .yetki li { display: flex; gap: 10px; font-size: 14px; line-height: 1.45; color: var(--metin2); }
+  .yetki li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--orman); margin-top: 8px; flex: none; }
+</style>
+</head>
+<body>
+<!-- Yönetici görünümü. Kişi ekleme ve rol verme sadece yöneticide -->
+<main class="ekran uzun" style="padding-bottom:120px">
+  <header style="padding:22px 20px 0">
+    <span class="etiket" style="background:var(--orman);color:var(--fistik)">Yönetici görünümü</span>
+    <h1 class="b38" style="margin-top:12px">Ekip</h1>
+    <p class="satir soluk" style="gap:6px;margin-top:6px;font-size:14px">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="4" y="11" width="16" height="10" rx="2.5"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+      4 kişi · Veriler AhsaTech sunucusunda
+    </p>
+  </header>
+
+  <div class="sutun" style="padding:18px 16px 0;gap:12px">
+    <section class="kart" style="background:var(--orman);color:#fff;gap:12px">
+      <h2 class="b24" style="color:#fff">Ekibe birini çağır</h2>
+      <p style="font-size:14px;line-height:1.45;color:var(--adacayi)">Ekibe kişiyi sadece yönetici ekler. Davet edilen kişi e-postasındaki bağlantıyla katılır.</p>
+      <div class="satir" style="gap:8px">
+        <span class="satir esnek" style="height:48px;border-radius:24px;background:rgba(255,255,255,.1);padding:0 16px;font-size:15px;color:var(--adacayi)">e-posta adresi</span>
+        <span class="satir" style="height:48px;border-radius:24px;background:var(--fistik);color:var(--murekkep);padding:0 18px;font-size:15px;font-weight:700">Davet et</span>
+      </div>
+    </section>
+
+    <section class="kart" style="gap:4px">
+      <h2 class="b17" style="padding-bottom:4px">Kişiler</h2>
+      <div class="liste-satiri kisi"><span class="av av40 MA">MA</span><div class="t"><b>Mehmet Akif Akdöl</b><small>Yönetici</small></div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gri)" stroke-width="2" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg></div>
+      <div class="liste-satiri kisi"><span class="av av40 Y1">Y1</span><div class="t"><b>Yazılımcı 1</b><small>Üye</small></div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gri)" stroke-width="2" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg></div>
+      <div class="liste-satiri kisi"><span class="av av40 Y2">Y2</span><div class="t"><b>Yazılımcı 2</b><small>Üye</small></div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gri)" stroke-width="2" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg></div>
+      <div class="liste-satiri kisi"><span class="av av40 Y3">Y3</span><div class="t"><b>Yazılımcı 3 (sen)</b><small class="satir" style="gap:6px"><span style="width:7px;height:7px;border-radius:50%;background:#3E9B5F"></span>Şu an çevrimiçi · Üye</small></div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gri)" stroke-width="2" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg></div>
+    </section>
+
+    <section class="kart">
+      <h2 class="b17">Kim neyi değiştirebilir?</h2>
+      <ul class="yetki sutun" style="list-style:none;gap:8px">
+        <li>Yönetici kişi ekler, projeye atar ve rol verir.</li>
+        <li>Üyeler atandıkları projede iş ekler, taşır ve yorum yazar.</li>
+        <li>Projeye atanmayan kişi o projeyi sadece izler.</li>
+        <li>Projeyi ve sütunları arşivlemeyi sadece yönetici yapar.</li>
+      </ul>
+    </section>
+  </div>
+
+  <nav class="alt-menu" aria-label="Ana menü">
+    <div class="menu">
+      <span class="oge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="4" width="5" height="16" rx="1.5"/><rect x="10" y="4" width="5" height="11" rx="1.5"/><rect x="17" y="4" width="4" height="7" rx="1.5"/></svg>Projeler</span>
+      <span class="oge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>Bildirimler<span class="rozet">2</span></span>
+      <span class="oge aktif"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5M16 4.6a3.5 3.5 0 0 1 0 6.8M18.5 14.8c1.6.8 2.6 2.6 3 5.2"/></svg>Ekip</span>
+    </div>
+    <button class="yeni-is" aria-label="Yeni iş ekle"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+  </nav>
+</main>
+</body>
+</html>

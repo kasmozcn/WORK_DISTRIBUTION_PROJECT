@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GörevAkış · Giriş</title>
+<link rel="stylesheet" href="../gorevakis.css">
+<style>
+  .ekran { background: var(--orman); }
+  .cubuk { position: absolute; width: 54px; border-radius: 27px; }
+  .logo { position: absolute; left: 24px; top: 64px; width: 176px; }
+  .form { top: 352px; height: 492px; padding: 28px 22px 26px; gap: 16px; }
+  .alan { display: flex; flex-direction: column; gap: 7px; font-size: 14px; font-weight: 600; }
+  .kutu { display: flex; align-items: center; height: 56px; border-radius: 16px; background: var(--kagit); padding: 0 18px; font-size: 16px; font-weight: 400; }
+</style>
+</head>
+<body>
+<main class="ekran">
+  <!-- Dekor: logodaki üç çubuk -->
+  <div class="cubuk" style="left:206px;top:214px;height:150px;background:var(--fistik)" aria-hidden="true"></div>
+  <div class="cubuk" style="left:270px;top:134px;height:230px;background:var(--kagit)" aria-hidden="true"></div>
+  <div class="cubuk" style="left:334px;top:46px;height:318px;background:var(--cam)" aria-hidden="true"></div>
+
+  <div class="logo">
+    <div class="d" style="font-size:38px;line-height:1;font-weight:800;letter-spacing:-1.1px;color:#fff">GörevAkış</div>
+    <p style="margin-top:14px;font-size:16px;line-height:1.4;color:var(--adacayi)">Ekibin işleri tek yerde. Kimde ne var, herkes görür.</p>
+  </div>
+
+  <form class="alt-sayfa form">
+    <h1 class="b29">Tekrar hoş geldin</h1>
+    <label class="alan">E-posta
+      <span class="kutu soluk">e-posta adresin</span>
+    </label>
+    <label class="alan">Şifre
+      <span class="kutu" style="box-shadow:inset 0 0 0 2px var(--murekkep);padding-right:6px">••••••••••
+        <span class="esnek"></span>
+        <span class="daire" style="width:44px;height:44px;color:var(--soluk)" aria-label="Şifreyi göster">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+        </span>
+      </span>
+    </label>
+    <span class="alti-cizili" style="align-self:flex-end;font-size:14px;font-weight:600">Şifremi unuttum</span>
+    <button type="submit" class="satir" style="justify-content:center;gap:10px;height:56px;border:0;border-radius:28px;background:var(--fistik);font-size:16px;font-weight:700">
+      Giriş yap
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </button>
+    <span class="esnek"></span>
+    <div class="sutun soluk" style="gap:6px;align-items:center;font-size:13px;line-height:1.45">
+      <span>Davet e-postası geldiyse oradaki bağlantıyla katıl.</span>
+      <span class="satir" style="gap:6px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="4" y="11" width="16" height="10" rx="2.5"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        Veriler AhsaTech sunucusunda kalır
+      </span>
+    </div>
+  </form>
+</main>
+</body>
+</html>

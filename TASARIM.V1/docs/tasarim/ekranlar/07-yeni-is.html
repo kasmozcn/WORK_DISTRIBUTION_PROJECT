@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GörevAkış · Yeni iş</title>
+<link rel="stylesheet" href="../gorevakis.css">
+<style>
+  .ekran { background: #8F958C; }
+  .form { top: 56px; height: 788px; padding: 12px 20px 22px; gap: 16px; }
+  .soru { font-size: 13px; font-weight: 600; color: var(--soluk); margin-bottom: 8px; }
+  .secenekler { display: flex; flex-wrap: wrap; gap: 8px; }
+  .secenek { padding: 0 12px; }
+  .kisi { display: flex; flex-direction: column; align-items: center; gap: 4px; width: 52px; font-size: 12px; font-weight: 500; }
+  .kisi .av { box-shadow: 0 0 0 3px #fff; }
+  .kisi.secili .av { box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--murekkep); }
+  .kisi.secili { font-weight: 700; }
+  .sutun-sec { flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; height: 48px; border-radius: 16px; font-size: 14px; font-weight: 500; border: 0; }
+</style>
+</head>
+<body>
+<!-- "+" butonuyla açılır. Sırasıyla: ne yapılacak → kime → ne zamana → hangi sütuna -->
+<main class="ekran">
+  <div style="padding:16px 20px;opacity:.45;color:#fff" aria-hidden="true">
+    <div class="b29">2 iş seni bekliyor.</div>
+  </div>
+
+  <form class="alt-sayfa form">
+    <span class="tutamac"></span>
+    <div class="satir">
+      <span style="font-size:14px;font-weight:600">Yeni iş <span class="soluk" style="font-weight:500">· Destek ve Bakım</span></span>
+      <span class="esnek"></span>
+      <span class="daire" style="width:40px;height:40px;background:var(--kagit)" aria-label="Kapat"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></span>
+    </div>
+
+    <div>
+      <div class="b24" style="font-size:26px;line-height:1.15;letter-spacing:-0.6px;border-bottom:2px solid var(--murekkep);padding-bottom:8px">Yedekleme betiğini güncelle</div>
+      <span class="satir soluk" style="gap:6px;margin-top:10px;font-size:14px;font-weight:500">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Not ekle
+      </span>
+    </div>
+
+    <div>
+      <p class="soru">Kime?</p>
+      <div class="satir" style="gap:6px">
+        <span class="kisi"><span class="av av44 MA">MA</span>MA</span>
+        <span class="kisi secili"><span class="av av44 Y1">Y1</span>Y1</span>
+        <span class="kisi"><span class="av av44 Y2">Y2</span>Y2</span>
+        <span class="kisi"><span class="av av44 Y3">Y3</span>Ben</span>
+        <span class="kisi"><span class="daire daire44" style="border:1.5px dashed var(--gri);color:var(--soluk)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.5 2"/></svg></span>Sonra</span>
+      </div>
+    </div>
+
+    <div>
+      <p class="soru">Ne zamana?</p>
+      <div class="secenekler">
+        <span class="secenek">Bugün</span><span class="secenek">Yarın</span><span class="secenek secili">Cuma</span>
+        <span class="secenek"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Başka</span>
+      </div>
+      <div class="secenekler" style="margin-top:8px">
+        <span class="secenek">09.00</span><span class="secenek">12.00</span><span class="secenek secili">17.00</span>
+        <span class="secenek"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Saat seç</span>
+      </div>
+    </div>
+
+    <div>
+      <p class="soru">Hangi sütun?</p>
+      <div class="satir" style="gap:8px">
+        <span class="sutun-sec" style="background:var(--tepsi);box-shadow:inset 0 0 0 2px var(--murekkep);font-weight:700">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Yapılacak</span>
+        <span class="sutun-sec" style="background:var(--kagit)">Devam Ediyor</span>
+        <span class="sutun-sec" style="background:var(--kagit)">Tamamlandı</span>
+      </div>
+    </div>
+
+    <span class="esnek"></span>
+    <p class="satir soluk" style="gap:10px;align-items:flex-start;font-size:13px;line-height:1.45">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+      Yazılımcı 1’e haber verilecek. Cuma 17.00’den bir gün önce de hatırlatılır.
+    </p>
+    <button type="submit" class="satir" style="justify-content:center;gap:10px;height:56px;border:0;border-radius:28px;background:var(--murekkep);color:#fff;font-size:16px;font-weight:700">
+      İşi ekle
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--fistik)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </button>
+  </form>
+</main>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GörevAkış · İş detayı</title>
+<link rel="stylesheet" href="../gorevakis.css">
+<style>
+  .ekran { background: var(--tepsi); }
+  .icerik { position: absolute; left: 0; right: 0; top: 194px; bottom: 0; background: #fff; border-radius: 28px 28px 0 0; padding: 24px 22px 0; display: flex; flex-direction: column; gap: 20px; }
+  .bilgi { height: 48px; gap: 10px; }
+  .bilgi .etiket-adi { width: 84px; font-size: 14px; color: var(--soluk); }
+  .bilgi .deger { flex: 1; display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 500; }
+  .balon { display: flex; flex-direction: column; gap: 2px; padding: 9px 13px; }
+</style>
+</head>
+<body>
+<main class="ekran">
+  <div class="satir" style="gap:8px;padding:12px 14px 0">
+    <span class="daire daire44" style="background:#fff" aria-label="Geri"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></span>
+    <span class="hap" style="padding:0 14px 0 18px">Yapılacak<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></span>
+    <span class="esnek"></span>
+    <span class="hap" style="padding:0 16px 0 14px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4z"/><path d="m13.5 6.5 4 4"/></svg>Düzenle</span>
+    <span class="daire daire44" style="background:#fff" aria-label="Diğer işlemler"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="19" cy="12" r="1.7"/></svg></span>
+  </div>
+
+  <h1 class="b29" style="margin:20px 22px 0;line-height:1.08;letter-spacing:-0.7px">Mobil girişte oturum düşme hatasını incele</h1>
+  <div class="satir" style="gap:10px;margin:16px 22px 0;font-size:14px">
+    <span class="av av32 Y3">Y3</span>Senin işin
+    <span style="margin-left:4px;padding:5px 11px;border-radius:10px;background:var(--domates-acik);color:var(--domates);font-weight:600">Yarın 12.00</span>
+  </div>
+
+  <div class="icerik">
+    <section class="sutun" style="gap:6px">
+      <h2 class="b18">Not</h2>
+      <p style="font-size:15px;line-height:1.55;color:var(--metin2)">Uygulama arka plana alınıp tekrar açılınca oturum kapanıyor. Müşteri B iki kez bildirdi. <span class="soluk">Mehmet Akif, 25 Eki</span></p>
+    </section>
+
+    <section class="sutun">
+      <h2 class="b18" style="padding-bottom:4px">Bilgiler</h2>
+      <div class="liste-satiri bilgi"><span class="etiket-adi">Sorumlu</span><span class="deger"><span class="av av26 Y3">Y3</span>Yazılımcı 3 (sen)</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gri)" stroke-width="2" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg></div>
+      <div class="liste-satiri bilgi"><span class="etiket-adi">Son tarih</span><span class="deger">Salı, 27 Ekim · 12.00</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gri)" stroke-width="2" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg></div>
+      <div class="liste-satiri bilgi"><span class="etiket-adi">Sütun</span><span class="deger"><span style="width:16px;height:16px;border-radius:6px;background:var(--tepsi);box-shadow:inset 0 0 0 1px #C9CFC4"></span>Yapılacak</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gri)" stroke-width="2" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg></div>
+    </section>
+
+    <section class="sutun" style="gap:10px">
+      <h2 class="b18">Konuşma</h2>
+      <div class="satir" style="gap:8px;align-items:flex-end">
+        <span class="av av28 MA">MA</span>
+        <div class="balon" style="background:var(--kagit);border-radius:18px 18px 18px 6px">
+          <b style="font-size:12px;color:var(--cam)">Mehmet Akif</b>
+          <span style="font-size:14px;line-height:1.4">Müşterinin ekran kaydı ortak klasörde.</span>
+          <span class="soluk" style="font-size:11px">25 Eki</span>
+        </div>
+      </div>
+      <div class="satir" style="justify-content:flex-end">
+        <div class="balon" style="background:var(--fistik);border-radius:18px 18px 6px 18px">
+          <span style="font-size:14px;line-height:1.4">Tekrarladım, ayara bakıyorum.</span>
+          <span style="font-size:11px;color:#3A4A2A;align-self:flex-end">09.15</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="satir" style="position:absolute;left:0;right:0;bottom:0;gap:10px;padding:12px 14px 24px;background:#fff;border-top:1px solid var(--cizgi)">
+    <span class="satir soluk esnek" style="height:48px;border-radius:24px;background:var(--kagit);padding:0 18px;font-size:15px">Bir şey yaz…</span>
+    <span class="daire" style="width:48px;height:48px;background:var(--murekkep);color:var(--fistik)" aria-label="Gönder"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+  </div>
+</main>
+</body>
+</html>

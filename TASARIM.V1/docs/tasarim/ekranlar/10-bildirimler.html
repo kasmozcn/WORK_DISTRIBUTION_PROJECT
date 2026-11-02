@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GörevAkış · Bildirimler</title>
+<link rel="stylesheet" href="../gorevakis.css">
+<style>
+  .bolum { font-size: 13px; font-weight: 600; color: var(--soluk); padding: 0 6px 8px; }
+  .bildirim { display: flex; gap: 12px; align-items: flex-start; background: #fff; border-radius: 20px; padding: 14px 16px; }
+  .bildirim.okundu { background: transparent; box-shadow: inset 0 0 0 1px var(--cizgi2); }
+  .bildirim .t { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+  .bildirim .ust { font-size: 13px; color: var(--soluk); }
+  .bildirim b { font-size: 15px; font-weight: 600; line-height: 1.35; }
+  .bildirim .alt { font-size: 12px; color: var(--soluk); margin-top: 2px; }
+  .yeni { width: 9px; height: 9px; border-radius: 50%; background: var(--rozet); margin-top: 6px; flex: none; }
+</style>
+</head>
+<body>
+<main class="ekran">
+  <header style="padding:22px 20px 0">
+    <div class="satir">
+      <h1 class="b34">Bildirimler</h1>
+      <span class="esnek"></span>
+      <span class="alti-cizili" style="font-size:14px;font-weight:600">Hepsini okudum</span>
+    </div>
+    <p class="soluk" style="margin-top:4px;font-size:15px">2 yeni</p>
+  </header>
+
+  <div class="sutun" style="padding:20px 16px 0;gap:8px">
+    <p class="bolum">Bugün</p>
+    <article class="bildirim">
+      <span class="av av40 MA">MA</span>
+      <div class="t"><span class="ust">Mehmet Akif sana yeni bir iş verdi</span><b>Müşteri A için demo ortamı kur</b><span class="alt">10.42 · Destek ve Bakım · Perşembe 17.00</span></div>
+      <span class="yeni" aria-label="Okunmadı"></span>
+    </article>
+    <article class="bildirim">
+      <span class="daire" style="width:40px;height:40px;background:var(--domates-acik);color:var(--domates)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span>
+      <div class="t"><span class="ust" style="color:var(--domates);font-weight:600">Yarın teslim</span><b>Mobil girişte oturum düşme hatasını incele</b><span class="alt">09.00 · Destek ve Bakım · yarın 12.00</span></div>
+      <span class="yeni" aria-label="Okunmadı"></span>
+    </article>
+
+    <p class="bolum" style="margin-top:12px">Bu hafta</p>
+    <article class="bildirim okundu">
+      <span class="av av40 MA">MA</span>
+      <div class="t"><span class="ust">Mehmet Akif sana yeni bir iş verdi</span><b>Ekim ayı müşteri raporuna destek ol</b><span class="alt">Pazar · Destek ve Bakım</span></div>
+    </article>
+    <article class="bildirim okundu">
+      <span class="daire" style="width:40px;height:40px;background:var(--tepsi)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+      <div class="t"><span class="ust">Bugün teslim</span><b>SSL sertifikasını yenile</b><span class="alt">Cuma · Destek ve Bakım · zamanında bitti</span></div>
+    </article>
+
+    <p class="satir soluk" style="gap:8px;align-items:flex-start;padding:12px 6px 0;font-size:13px;line-height:1.45">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.5v.5"/></svg>
+      Sadece sana verilen işler ve teslim saatleri için haber veririz. Bildirimleri profilinden sessize alabilirsin.
+    </p>
+  </div>
+
+  <nav class="alt-menu" aria-label="Ana menü">
+    <div class="menu">
+      <span class="oge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="4" width="5" height="16" rx="1.5"/><rect x="10" y="4" width="5" height="11" rx="1.5"/><rect x="17" y="4" width="4" height="7" rx="1.5"/></svg>Projeler</span>
+      <span class="oge aktif"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>Bildirimler<span class="rozet">2</span></span>
+      <span class="oge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5M16 4.6a3.5 3.5 0 0 1 0 6.8M18.5 14.8c1.6.8 2.6 2.6 3 5.2"/></svg>Ekip</span>
+    </div>
+    <button class="yeni-is" aria-label="Yeni iş ekle"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+  </nav>
+</main>
+</body>
+</html>

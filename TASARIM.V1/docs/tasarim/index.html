@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GörevAkış · Ekran tasarımları</title>
+<link rel="stylesheet" href="gorevakis.css">
+<style>
+  body { background: var(--kagit); }
+  .sayfa { max-width: 1320px; margin: 0 auto; padding: 48px 24px 80px; }
+  .ust { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 32px; border-bottom: 2px solid var(--murekkep); padding-bottom: 20px; }
+  .ust h1 { font-family: var(--baslik); font-size: 44px; font-weight: 800; letter-spacing: -1.2px; line-height: 1; }
+  .ust p { max-width: 560px; font-size: 16px; line-height: 1.5; color: var(--soluk); }
+  .baglantilar { display: flex; flex-wrap: wrap; gap: 8px; margin-left: auto; }
+  .baglantilar a { display: inline-flex; align-items: center; height: 40px; padding: 0 16px; border-radius: 20px; background: #fff; color: var(--murekkep); font-size: 14px; font-weight: 600; text-decoration: none; }
+  .baglantilar a.ana { background: var(--murekkep); color: var(--fistik); }
+  .izgara { display: grid; grid-template-columns: repeat(auto-fill, minmax(390px, 1fr)); gap: 40px 24px; margin-top: 36px; justify-items: center; }
+  figure { display: flex; flex-direction: column; gap: 12px; width: 390px; max-width: 100%; }
+  figcaption { display: flex; align-items: baseline; gap: 10px; }
+  figcaption b { font-family: var(--baslik); font-size: 20px; font-weight: 600; letter-spacing: -0.3px; }
+  figcaption span { font-size: 13px; color: var(--soluk); flex: 1; }
+  figcaption a { font-size: 13px; font-weight: 600; color: var(--murekkep); }
+  .cerceve { width: 390px; height: 844px; border-radius: 34px; overflow: hidden; background: #fff; box-shadow: 0 0 0 1px var(--cizgi2), 0 24px 48px -24px rgba(23,33,27,.35); }
+  iframe { width: 390px; height: 844px; border: 0; display: block; }
+  @media (max-width: 440px) {
+    .sayfa { padding: 28px 16px 60px; }
+    .ust h1 { font-size: 34px; }
+    .izgara { grid-template-columns: 1fr; }
+    figure, .cerceve, iframe { width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="sayfa">
+  <header class="ust">
+    <div>
+      <h1>GörevAkış</h1>
+      <p style="margin-top:10px">AhsaTech için iş takip uygulamasının ekran tasarımları. Her ekran 390 px genişliğinde bir telefon ekranıdır; uzun ekranlar çerçevenin içinde kaydırılabilir.</p>
+    </div>
+    <nav class="baglantilar">
+      <a class="ana" href="https://www.figma.com/design/b5zCih6VsOk1hNCE2Mx6jN">Figma dosyası</a>
+      <a href="https://www.figma.com/proto/b5zCih6VsOk1hNCE2Mx6jN/GorevAkis?node-id=2-86&amp;starting-point-node-id=2%3A86">Tıklanabilir prototip</a>
+    </nav>
+  </header>
+
+  <main class="izgara">
+    <figure><figcaption><b>Giriş</b><span>Davetle gelen kişi girer</span><a href="ekranlar/01-giris.html">Kod</a></figcaption><div class="cerceve"><iframe src="ekranlar/01-giris.html" title="Giriş" loading="lazy"></iframe></div></figure>
+    <figure><figcaption><b>Projeler</b><span>Ana sayfa, kişinin projeleri</span><a href="ekranlar/02-projeler.html">Kod</a></figcaption><div class="cerceve"><iframe src="ekranlar/02-projeler.html" title="Projeler" loading="lazy"></iframe></div></figure>
+    <figure><figcaption><b>Proje panosu</b><span>Sütunlar ve işler</span><a href="ekranlar/03-proje-panosu.html">Kod</a></figcaption><div class="cerceve"><iframe src="ekranlar/03-proje-panosu.html" title="Proje panosu" loading="lazy"></iframe></div></figure>
+    <figure><figcaption><b>Pano, izleyici</b><span>Atanmayan kişi sadece izler</span><a href="ekranlar/04-proje-panosu-izleyici.html">Kod</a></figcaption><div class="cerceve"><iframe src="ekranlar/04-proje-panosu-izleyici.html" title="Proje panosu, izleyici" loading="lazy"></iframe></div></figure>
+    <figure><figcaption><b>İşi taşıma</b><span>Basılı tutunca açılır</span><a href="ekranlar/05-isi-tasima.html">Kod</a></figcaption><div class="cerceve"><iframe src="ekranlar/05-isi-tasima.html" title="İşi taşıma" loading="lazy"></iframe></div></figure>
+    <figure><figcaption><b>İş detayı</b><span>Not, bilgiler, konuşma</span><a href="ekranlar/06-is-detayi.html">Kod</a></figcaption><div class="cerceve"><iframe src="ekranlar/06-is-detayi.html" title="İş detayı" loading="lazy"></iframe></div></figure>
+    <figure><figcaption><b>Yeni iş</b><span>Kime, ne zamana, hangi sütun</span><a href="ekranlar/07-yeni-is.html">Kod</a></figcaption><div class="cerceve"><iframe src="ekranlar/07-yeni-is.html" title="Yeni iş" loading="lazy"></iframe></div></figure>
+    <figure><figcaption><b>Proje bilgisi</b><span>Amaç, sorumlular, sütunlar</span><a href="ekranlar/08-proje-bilgisi.html">Kod</a></figcaption><div class="cerceve"><iframe src="ekranlar/08-proje-bilgisi.html" title="Proje bilgisi" loading="lazy"></iframe></div></figure>
+    <figure><figcaption><b>Arama</b><span>İşler, projeler ve arşiv</span><a href="ekranlar/09-arama.html">Kod</a></figcaption><div class="cerceve"><iframe src="ekranlar/09-arama.html" title="Arama" loading="lazy"></iframe></div></figure>
+    <figure><figcaption><b>Bildirimler</b><span>Verilen işler, teslim saatleri</span><a href="ekranlar/10-bildirimler.html">Kod</a></figcaption><div class="cerceve"><iframe src="ekranlar/10-bildirimler.html" title="Bildirimler" loading="lazy"></iframe></div></figure>
+    <figure><figcaption><b>Profil</b><span>Kişisel bilgiler, bildirim ayarı</span><a href="ekranlar/11-profil.html">Kod</a></figcaption><div class="cerceve"><iframe src="ekranlar/11-profil.html" title="Profil" loading="lazy"></iframe></div></figure>
+    <figure><figcaption><b>Ekip</b><span>Yönetici görünümü</span><a href="ekranlar/12-ekip.html">Kod</a></figcaption><div class="cerceve"><iframe src="ekranlar/12-ekip.html" title="Ekip" loading="lazy"></iframe></div></figure>
+  </main>
+</div>
+</body>
+</html>

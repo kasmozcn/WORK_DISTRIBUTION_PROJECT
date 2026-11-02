@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GörevAkış · İşi taşıma</title>
+<link rel="stylesheet" href="../gorevakis.css">
+<style>
+  .hedef { flex: 1; border-radius: 22px; padding: 14px 9px; display: flex; flex-direction: column; justify-content: space-between; border: 0; text-align: left; }
+  .hedef b { font-family: var(--baslik); font-size: 15px; font-weight: 600; letter-spacing: -0.3px; line-height: 1.1; }
+  .eylem { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; height: 48px; border-radius: 24px; border: 0; font-size: 15px; font-weight: 600; }
+</style>
+</head>
+<body>
+<!-- Bir iş basılı tutulunca açılır: iş bir sütuna bırakılır ya da arşivlenir/silinir -->
+<main class="ekran">
+  <div style="opacity:.35;padding:22px 20px 0" aria-hidden="true">
+    <p class="soluk" style="font-size:14px">Projeler</p>
+    <div class="b38" style="margin-top:12px">Destek ve<br>Bakım</div>
+    <div class="tepsi yapilacak" style="width:auto;margin-top:26px">
+      <div class="b24" style="padding:0 4px 6px">Yapılacak</div>
+      <div style="height:76px;border:2px dashed var(--gri);border-radius:18px"></div>
+      <div style="height:92px;background:#fff;border-radius:18px"></div>
+      <div style="height:76px;background:#fff;border-radius:18px"></div>
+    </div>
+  </div>
+
+  <article class="is-karti" style="position:absolute;left:30px;top:214px;width:318px;transform:rotate(-3deg);box-shadow:0 22px 44px rgba(23,33,27,.28),0 2px 6px rgba(23,33,27,.12)">
+    <h3>Müşteri A için demo ortamı kur</h3>
+    <div class="is-bilgi">29 Eki, 17.00<span class="av av28 Y3" style="margin-left:auto">Y3</span></div>
+  </article>
+
+  <section class="alt-sayfa" style="padding:12px 20px 26px;gap:16px;box-shadow:0 -12px 40px rgba(23,33,27,.1)" aria-label="İşi taşı">
+    <span class="tutamac"></span>
+    <div>
+      <h2 class="b29" style="font-size:27px">Bu işle ne yapalım?</h2>
+      <p class="soluk" style="margin-top:4px;font-size:15px">Bir sütuna bırak ya da arşivle. Herkes anında görür.</p>
+    </div>
+    <div class="satir" style="gap:8px;align-items:flex-end">
+      <button class="hedef" style="height:150px;background:var(--tepsi)"><span class="soluk" style="font-size:12px">Şu an burada</span><b>Yapılacak</b></button>
+      <button class="hedef" style="height:168px;background:var(--fistik);box-shadow:inset 0 0 0 3px var(--murekkep)">
+        <span class="daire" style="width:34px;height:34px;background:var(--murekkep);color:var(--fistik)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span>
+        <b style="font-weight:700">Devam Ediyor</b></button>
+      <button class="hedef" style="height:150px;background:var(--orman);color:#fff"><span style="font-size:12px;color:var(--adacayi)">2 iş</span><b>Tamamlandı</b></button>
+    </div>
+    <div class="satir" style="gap:10px">
+      <button class="eylem" style="background:var(--kagit)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><rect x="3" y="4" width="18" height="5" rx="1.5"/><path d="M5 9v10a1.5 1.5 0 0 0 1.5 1.5h11A1.5 1.5 0 0 0 19 19V9M10 13h4"/></svg>Arşivle</button>
+      <button class="eylem" style="background:var(--domates-acik);color:var(--domates)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M9 7V4.5h6V7M18 7l-.8 12.5a1.5 1.5 0 0 1-1.5 1.5H8.3a1.5 1.5 0 0 1-1.5-1.5L6 7"/></svg>Sil</button>
+    </div>
+    <button class="eylem" style="background:transparent;flex:none">Vazgeç</button>
+  </section>
+</main>
+</body>
+</html>

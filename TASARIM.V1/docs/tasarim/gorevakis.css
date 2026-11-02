@@ -1,0 +1,133 @@
+/* GörevAkış — ortak tasarım stilleri
+   Figma: https://www.figma.com/design/b5zCih6VsOk1hNCE2Mx6jN
+   Her ekran 390 px genişliğinde bir telefon ekranıdır (Flutter hedefi). */
+
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400..800&family=Instrument+Sans:wght@400..700&display=swap");
+
+:root {
+  /* Renkler */
+  --murekkep: #17211B;      /* ana metin, koyu yüzeyler */
+  --kagit: #EEF0EA;         /* ekran zemini */
+  --beyaz: #FFFFFF;
+  --soluk: #56625A;         /* ikincil metin */
+  --metin2: #2E3832;        /* uzun metin */
+  --fistik: #D3F26A;        /* vurgu, "Devam Ediyor" sütunu */
+  --orman: #1F3A2C;         /* "Tamamlandı" sütunu, koyu kart */
+  --tepsi: #E0E4DA;         /* "Yapılacak" sütunu */
+  --domates: #B23A1E;       /* gecikme, uyarı */
+  --domates-acik: #FBE3DA;
+  --gri: #9AA59D;
+  --cizgi: #E3E6DE;
+  --cizgi2: #D9DDD3;
+  --menu-soluk: #AEB8B1;
+  --rozet: #E2603F;
+  --adacayi: #B9C9BE;
+  /* Kişi renkleri */
+  --cam: #2E5E4E;           /* MA */
+  --hardal: #9A5B1E;        /* Y1 */
+  --kot: #2F5577;           /* Y2 */
+  --murdum: #7B3F63;        /* Y3 */
+  /* Yazı tipleri */
+  --baslik: "Bricolage Grotesque", Arial, sans-serif;
+  --govde: "Instrument Sans", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { margin: 0; background: #C9CDC4; font-family: var(--govde); color: var(--murekkep); }
+svg { display: block; flex: none; }
+button, input, textarea { font: inherit; color: inherit; }
+
+/* Telefon ekranı */
+.ekran { position: relative; width: 390px; min-height: 844px; height: 844px; overflow: hidden; background: var(--kagit); }
+.ekran.uzun { height: auto; padding-bottom: 40px; }
+
+/* Yerleşim yardımcıları */
+.satir { display: flex; align-items: center; }
+.sutun { display: flex; flex-direction: column; }
+.esnek { flex: 1; }
+.d { font-family: var(--baslik); }
+.soluk { color: var(--soluk); }
+.alti-cizili { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Başlık ölçüleri */
+.b38 { font-family: var(--baslik); font-size: 38px; line-height: 1.02; font-weight: 700; letter-spacing: -0.95px; }
+.b34 { font-family: var(--baslik); font-size: 34px; line-height: 1.05; font-weight: 700; letter-spacing: -0.85px; }
+.b29 { font-family: var(--baslik); font-size: 29px; line-height: 1.1; font-weight: 700; letter-spacing: -0.6px; }
+.b24 { font-family: var(--baslik); font-size: 24px; font-weight: 600; letter-spacing: -0.5px; }
+.b18 { font-family: var(--baslik); font-size: 18px; font-weight: 600; }
+.b17 { font-family: var(--baslik); font-size: 17px; font-weight: 600; }
+
+/* Daireler ve avatarlar */
+.daire { border-radius: 50%; display: flex; align-items: center; justify-content: center; flex: none; }
+.daire44 { width: 44px; height: 44px; }
+.av { border-radius: 50%; display: flex; align-items: center; justify-content: center; flex: none;
+      color: #fff; font-family: var(--baslik); font-weight: 700; }
+.av26 { width: 26px; height: 26px; font-size: 10px; }
+.av28 { width: 28px; height: 28px; font-size: 11px; }
+.av30 { width: 30px; height: 30px; font-size: 11px; }
+.av32 { width: 32px; height: 32px; font-size: 12px; }
+.av40 { width: 40px; height: 40px; font-size: 15px; }
+.av44 { width: 44px; height: 44px; font-size: 14px; }
+.av50 { width: 50px; height: 50px; font-size: 16px; }
+.av72 { width: 72px; height: 72px; font-size: 26px; }
+.MA { background: var(--cam); } .Y1 { background: var(--hardal); }
+.Y2 { background: var(--kot); }  .Y3 { background: var(--murdum); }
+
+/* Hap butonlar ve seçenekler */
+.hap { display: flex; align-items: center; gap: 6px; height: 44px; border-radius: 22px; background: var(--beyaz);
+       font-weight: 600; font-size: 14px; padding: 0 16px; border: 0; }
+.secenek { display: flex; align-items: center; gap: 6px; height: 44px; border-radius: 22px; padding: 0 16px;
+           background: var(--kagit); font-size: 14px; font-weight: 500; border: 0; }
+.secenek.secili { background: var(--murekkep); color: #fff; font-weight: 600; }
+.etiket { display: inline-flex; align-items: center; gap: 5px; border-radius: 12px; padding: 5px 10px; font-size: 12px; font-weight: 700; }
+.etiket.uye { background: var(--fistik); }
+.etiket.izleyici { background: var(--kagit); color: var(--soluk); }
+.gecikme { background: var(--domates-acik); color: var(--domates); font-weight: 600; border-radius: 8px; padding: 3px 9px; font-size: 13px; }
+
+/* Kartlar */
+.kart { background: var(--beyaz); border-radius: 24px; padding: 18px; display: flex; flex-direction: column; gap: 10px; }
+.liste-satiri { display: flex; align-items: center; gap: 12px; }
+.liste-satiri + .liste-satiri { border-top: 1px solid var(--cizgi); }
+
+/* Pano: sütun tepsileri ve iş kartları */
+.tepsiler { display: flex; gap: 12px; padding-left: 20px; margin-top: 18px; align-items: flex-start; }
+.tepsi { flex: none; width: 316px; border-radius: 28px; padding: 16px 14px 14px; display: flex; flex-direction: column; gap: 8px; }
+.tepsi.yapilacak { background: var(--tepsi); }
+.tepsi.devam { background: var(--fistik); }
+.tepsi-baslik { display: flex; align-items: center; justify-content: space-between; padding: 0 4px 6px; }
+.tepsi-baslik .sayi { font-family: var(--baslik); font-size: 24px; font-weight: 400; }
+.is-karti { background: var(--beyaz); border-radius: 18px; padding: 14px 14px 12px 16px; display: flex; flex-direction: column; gap: 10px; }
+.is-karti h3 { font-size: 16px; font-weight: 500; line-height: 1.35; }
+.is-bilgi { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--soluk); min-height: 28px; }
+.is-bilgi .vurgu { color: var(--domates); font-weight: 600; }
+.ben-alirim { margin-left: auto; height: 44px; padding: 0 16px; border: 1.5px solid var(--murekkep); border-radius: 22px;
+              background: transparent; font-size: 14px; font-weight: 600; }
+
+/* Kişi filtresi */
+.filtre { display: flex; align-items: center; gap: 8px; }
+.ben { display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px 0 4px; border: 1.5px solid #C9CFC4;
+       border-radius: 22px; font-size: 14px; font-weight: 500; }
+
+/* Alt menü */
+.alt-menu { position: absolute; left: 16px; right: 16px; bottom: 22px; display: flex; align-items: center; gap: 10px; }
+.alt-menu .menu { flex: 1; height: 66px; border-radius: 33px; background: var(--murekkep); display: flex;
+                  justify-content: space-between; align-items: center; padding: 0 6px; }
+.alt-menu .oge { position: relative; width: 84px; display: flex; flex-direction: column; align-items: center; gap: 3px;
+                 font-size: 12px; font-weight: 500; color: var(--menu-soluk); }
+.alt-menu .oge.aktif { color: var(--fistik); font-weight: 600; }
+.alt-menu .rozet { position: absolute; left: 48px; top: -6px; min-width: 18px; height: 18px; border-radius: 9px; background: var(--rozet);
+                   color: var(--murekkep); font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.alt-menu .yeni-is { width: 66px; height: 66px; border-radius: 50%; background: var(--fistik); display: flex; align-items: center; justify-content: center; }
+
+/* Alttan açılan sayfa */
+.alt-sayfa { position: absolute; left: 0; right: 0; bottom: 0; background: var(--beyaz); border-radius: 32px 32px 0 0;
+             display: flex; flex-direction: column; }
+.tutamac { width: 40px; height: 5px; border-radius: 3px; background: #D3D8CE; align-self: center; }
+
+/* Açma-kapama düğmesi */
+.anahtar { width: 50px; height: 30px; border-radius: 15px; padding: 3px; display: flex; align-items: center; flex: none; }
+.anahtar.acik { background: var(--orman); justify-content: flex-end; }
+.anahtar.kapali { background: #C9CFC4; justify-content: flex-start; }
+.anahtar i { width: 24px; height: 24px; border-radius: 12px; display: block; }
+.anahtar.acik i { background: var(--fistik); }
+.anahtar.kapali i { background: #fff; }
